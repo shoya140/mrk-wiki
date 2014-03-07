@@ -1,34 +1,70 @@
 @import "bootstrap";
 
+$link_color: #4a5b9a;
+$link_hover_color: #162458;
+$background_color: #f8f8f8;
+$footer_color: #333333;
+
+a {
+  color: $link_color;
+  &:visited {
+    color: $link_color;
+  }
+  &:hover {
+    color: $link_hover_color;
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+
 body{
     padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #333333;
+    background-color:$background_color;
+}
+
+.inner{
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .header{
-  padding: 10px;
-  background-color: #f8f8f8;
+  padding: 10px 20px;
 }
 
-.footer{
-  background-color: #333333;
-  padding: 20px;
-  color: #ffffff;
-  text-align: center;
+.sidebar{
+  background-color: #eeeeee;
+  width: 190px;
+  float: left;
+  padding: 10px;
+  min-height: 600px;
+  @media screen and (max-width: 900px) {
+    width: 20%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    min-height: 0;
+  }
 }
 
 .content{
-  background-color: #f8f8f8;
-  padding: 10px;
-  h1{
-    font-size: 20px;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  min-height: 600px;
+  width: 700px;
+  float: right;
+  @media screen and (max-width: 900px) {
+    width: 80%;
   }
-  a{
-    margin: 0px 5px 0px 0px;
-    &:hover{
-      color: #ffffff;
-    }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    min-height: 0;
   }
+}
+
+.footer{
+  top: 20px;
+  margin-bottom:20px;
+  text-align: center;
+  z-index: -1;
 }
