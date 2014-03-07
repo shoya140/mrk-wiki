@@ -5,6 +5,19 @@ $link_hover_color: #162458;
 $background_color: #f8f8f8;
 $footer_color: #333333;
 
+h1{
+  font-size:22px;
+  line-height:24px;
+}
+
+h1, h2, h3{
+  margin-top:15px;
+}
+
+ul {
+  margin-left: -1em;
+}
+
 a {
   color: $link_color;
   &:visited {
@@ -15,6 +28,19 @@ a {
     background-color: transparent;
     text-decoration: none;
   }
+  &.btn-primary{
+    color: #285e8e;
+  }
+  &.btn-danger{
+    color: #d43f3a;
+  }
+  &.btn-success{
+    color: #398439;
+  }
+}
+
+.btn{
+  background-color:#ffffff;
 }
 
 body{
@@ -32,24 +58,40 @@ body{
   padding: 10px 20px;
 }
 
-.sidebar{
+.navbutton-container{
+  @media screen and (min-width: 400px) {
+    position: absolute;
+    right: 5px;
+    margin-top: -40px;
+  }
+}
+
+.content{
+  overflow: hidden;
+}
+
+.content-sidebar{
   background-color: #eeeeee;
   width: 190px;
   float: left;
   padding: 10px;
   min-height: 600px;
+  padding-bottom: 32768px;
+  margin-bottom: -32768px;
   @media screen and (max-width: 900px) {
     width: 20%;
   }
   @media screen and (max-width: 600px) {
     width: 100%;
-    min-height: 0;
+    margin-bottom: 0px;
+    padding: 10px;
+    min-height: 20px;
   }
 }
 
-.content{
+.content-main{
   background-color: #ffffff;
-  padding: 10px 20px;
+  padding: 15px;
   min-height: 600px;
   width: 700px;
   float: right;

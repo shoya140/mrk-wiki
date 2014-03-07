@@ -3,17 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .post-title{
-  margin: 10px;
+  margin: 5px 5px 15px 5px;
   padding: 0 0 5px 0;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
   //     @include box-shadow(rgba(255, 255, 255, .3) 0 1px 0);
+  @media screen and (max-width: 600px) {
+    margin: 5px 0px 15px 0px;
+  }
 }
 
 .post-body-container{
-  margin: 20px;
-
+  margin: 5px 5px 5px 15px;
   h1{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
   }
@@ -25,4 +27,30 @@
     font-size: 16px;
     font-weight: 600;
   }
+  @media screen and (max-width: 600px) {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+.button-container{
+  margin: 20px 10px;
+  .btn{
+    padding:4px 8px;
+  }
+}
+
+.post-form{
+  input{
+    width: 100%;
+  }
+  textarea{
+    height: 400px;
+    width: 100%;
+  }
+}
+
+.delete-button{
+  position: absolute;
+  right: 20px;
+  margin-top: -40px;
 }

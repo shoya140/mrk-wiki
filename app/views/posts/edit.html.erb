@@ -1,5 +1,4 @@
-<h1>Editing post</h1>
+<h1>編集</h1>
+<%= link_to '削除',  @post,  method: :delete,  data: { confirm: '記事を削除します。よろしいですか？' },  class: "btn btn-danger delete-button" %>
 
 <%= render 'form' %>
-
-[<%= link_to 'キャンセル', @post %>]

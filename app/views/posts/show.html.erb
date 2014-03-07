@@ -6,6 +6,7 @@
         <%= markdown(@post.body) %>
     </div>
 </div>
-
-[<%= link_to '編集', edit_post_path(@post) %>]
-[<%= link_to '削除', @post, method: :delete, data: { confirm: 'Are you sure?' } %>]
+<div class="button-container">
+<%= link_to '編集', edit_post_path(@post), class: "btn btn-primary" %>
+<%= link_to '＋★', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %>
+</div>
