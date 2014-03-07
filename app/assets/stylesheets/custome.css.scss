@@ -1,0 +1,34 @@
+@import "bootstrap";
+
+body{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #333333;
+}
+
+.header{
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.footer{
+  background-color: #333333;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.content{
+  background-color: #f8f8f8;
+  padding: 10px;
+  h1{
+    font-size: 20px;
+  }
+  a{
+    margin: 0px 5px 0px 0px;
+    &:hover{
+      color: #ffffff;
+    }
+  }
+}

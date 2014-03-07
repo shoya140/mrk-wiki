@@ -1,0 +1,14 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-container{
+  .post-title{
+    margin: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    @include box-shadow(rgba(255, 255, 255, .3) 0 1px 0);
+  }
+  .post-body{
+    margin: 10px;
+  }
+}
