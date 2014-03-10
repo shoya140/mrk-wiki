@@ -4,6 +4,14 @@ $link_color: #4a5b9a;
 $link_hover_color: #162458;
 $background_color: #f8f8f8;
 $footer_color: #333333;
+$sidebar-background_color: #525d83;
+
+@mixin border_radius($value: 4px) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  border-radius: $value;
+}
 
 h1{
   font-size:22px;
@@ -71,13 +79,17 @@ body{
 }
 
 .content-sidebar{
-  background-color: #eeeeee;
+  background-color: $sidebar-background_color;
+  color: #f8f8f8;
   width: 190px;
   float: left;
   padding: 10px;
   min-height: 600px;
   padding-bottom: 32768px;
   margin-bottom: -32768px;
+  @media screen and (min-width: 900px) {
+    @include border_radius();
+  }
   @media screen and (max-width: 900px) {
     width: 20%;
   }
@@ -95,6 +107,9 @@ body{
   min-height: 600px;
   width: 700px;
   float: right;
+  @media screen and (min-width: 900px) {
+    @include border_radius();
+  }
   @media screen and (max-width: 900px) {
     width: 80%;
   }
