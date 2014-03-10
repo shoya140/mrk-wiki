@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_filter :authenticate_user!
   def set_sidebar
     @new_posts = Post.find(:all, :limit => 10, :order => 'updated_at DESC')
     @categories = Category.all

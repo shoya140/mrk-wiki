@@ -47,6 +47,14 @@ a {
   }
 }
 
+label{
+  margin: 10px 0 0 0;
+}
+
+#error_explanation{
+  width: 100%;
+}
+
 .btn{
   background-color:#ffffff;
 }
@@ -59,6 +67,12 @@ body{
 .inner{
   position: relative;
   max-width: 900px;
+  margin: 0 auto;
+}
+
+.inner-mini{
+  position: relative;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -137,9 +151,23 @@ body{
   }
 }
 
+.content-login{
+  margin-top:60px;
+  padding:30px 40px 40px 40px;
+  background-color:#ffffff;
+}
+
 .footer{
   top: 20px;
   margin-bottom:20px;
   text-align: center;
   z-index: -1;
+}
+
+.notification{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
 }

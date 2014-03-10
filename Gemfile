@@ -44,8 +44,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
 gem 'bootstrap-sass'
-gem 'compass-rails'
 
 group :development, :test do
   gem "rspec-rails", "~> 2.14.0"
