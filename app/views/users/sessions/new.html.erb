@@ -1,17 +1,14 @@
-<h1>Welcome to mrk::wiki</h1>
+<h1>mrk::wiki</h1>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-horizontal width-large"}) do |f| %>
+<%= f.input :email %>
+<%= f.input :password %>
+<% if devise_mapping.rememberable? -%>
+<%= f.input :remember_me, label: false, as: :boolean, inline_label: "ログイン状態を保持する" %>
+<% end -%>
+<div class="form-actions">
+    <%= f.button :submit, "Sign in", class: "btn-primary" %>
+</div>
 <% end %>
 
 <%= render "users/shared/links" %>

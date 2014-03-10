@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :authenticate_user!
+  before_filter :set_sidebar
   def set_sidebar
     @new_posts = Post.find(:all, :limit => 10, :order => 'updated_at DESC')
     @categories = Category.all

@@ -1,12 +1,10 @@
 <h1>Resend unlock instructions</h1>
 
-<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.submit "Resend unlock instructions" %></div>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-horizontal width-large"}) do |f| %>
+<%= f.input :email %>
+<div class="form-actions">
+    <%= f.button :submit, "再設定メール", class: "btn-primary" %>
+</div>
 <% end %>
 
 <%= render "users/shared/links" %>
