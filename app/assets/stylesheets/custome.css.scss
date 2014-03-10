@@ -99,6 +99,21 @@ body{
     padding: 10px;
     min-height: 20px;
   }
+  h1{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 10px 0 6px 0;
+  }
+  a{
+    color: #dddddd;
+    &:hover{
+      color: #ffffff;
+    }
+  }
+  ul {
+    margin-left: -1.5em;
+  }
 }
 
 .content-main{
@@ -116,6 +131,9 @@ body{
   @media screen and (max-width: 600px) {
     width: 100%;
     min-height: 0;
+    text-align:justify;
+    text-justify:inter-ideograph;
+
   }
 }
 

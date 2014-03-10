@@ -1,7 +1,7 @@
 <!--<p id="notice"><%= notice %></p>-->
 
 <div class="post-container">
-    <h1 class="post-title"><%= @post.title %></h1>
+    <h1 class="post-title"><%= @post.title %> [<%= link_to @post.category.name, @post.category %>]</h1>
     <div class="post-body-container">
         <%= markdown(@post.body) %>
     </div>
